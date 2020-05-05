@@ -14,9 +14,9 @@ namespace QuickBuy.Repositorio.Config
             builder.HasKey(u => u.Id) ;
             //Padrão Fluent
             builder.Property(u => u.Email).IsRequired().HasMaxLength(50);
-            builder.Property(u => u.Nome).IsRequired().HasMaxLength(50).HasColumnType("varchar");
-            builder.Property(u => u.Senha).IsRequired().HasMaxLength(10).HasColumnType("char");
-            builder.Property(u => u.SobreNome).IsRequired().HasMaxLength(150).HasColumnType("varchar");
+            builder.Property(u => u.Nome).IsRequired().HasMaxLength(50);
+            builder.Property(u => u.Senha).IsRequired().HasMaxLength(10);
+            builder.Property(u => u.SobreNome).IsRequired().HasMaxLength(150);
 
             builder.HasMany(u => u.Pedidos).WithOne(p => p.Usuario);
 

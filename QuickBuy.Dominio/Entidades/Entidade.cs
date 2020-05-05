@@ -7,10 +7,11 @@ namespace QuickBuy.Dominio.Entidades
 {
    public abstract class Entidade
     {
-        public List<string> _mensagem { get; set; }
+       //public List<string> _mensagem { get; set; }
         public List<string> MensagemValidacao
         {
-            get { return _mensagem ?? (_mensagem = new List<string>()); }
+            // get { return _mensagem ?? (_mensagem = new List<string>()); }
+            get { return MensagemValidacao; }
         }
         protected void LimparMensagensValidacao() 
         {
